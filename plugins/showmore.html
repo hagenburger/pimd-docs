@@ -1,0 +1,388 @@
+<html><head><meta charset="utf-8"><script></script><style>
+      .good { background: green; }
+      .bad { background: red; }
+      /*
+ Solarized Color Schemes originally by Ethan Schoonover
+ http://ethanschoonover.com/solarized
+
+ Ported for PrismJS by Hector Matos
+ Website: https://krakendev.io
+ Twitter Handle: https://twitter.com/allonsykraken)
+*/
+
+/*
+SOLARIZED HEX
+--------- -------
+base03    #002b36
+base02    #073642
+base01    #586e75
+base00    #657b83
+base0     #839496
+base1     #93a1a1
+base2     #eee8d5
+base3     #fdf6e3
+yellow    #b58900
+orange    #cb4b16
+red       #dc322f
+magenta   #d33682
+violet    #6c71c4
+blue      #268bd2
+cyan      #2aa198
+green     #859900
+*/
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #657b83; /* base00 */
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	background: #073642; /* base02 */
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	background: #073642; /* base02 */
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background-color: #fdf6e3; /* base3 */
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #93a1a1; /* base1 */
+}
+
+.token.punctuation {
+	color: #586e75; /* base01 */
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #268bd2; /* blue */
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.url,
+.token.inserted {
+	color: #2aa198; /* cyan */
+}
+
+.token.entity {
+	color: #657b83; /* base00 */
+	background: #eee8d5; /* base2 */
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #859900; /* green */
+}
+
+.token.function,
+.token.class-name {
+	color: #b58900; /* yellow */
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #cb4b16; /* orange */
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+html {
+  background: #fefefe;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif;
+  line-height: 1.4;
+  margin: auto;
+  max-width: 668px;
+  padding: 50px;
+}
+
+a {
+  color: #268bd2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code {
+  /* font-family: Fira Mono, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, Arial, sans-serif; */
+  background: #f6f8fa;
+  font-family: Courier, "Courier New", monospace;
+}
+
+pre {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 + h2,
+h2 + h3,
+h3 + h4,
+h4 + h5,
+h5 + h6,
+ul,
+ol,
+li,
+.pimd-example {
+  margin: calc(0.5rem * 1.4) 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: calc(2rem * 1.4);
+}
+
+.pimd-example {
+  background: #f6f8fa;
+  border: 1px rgba(0, 0, 0, 0.02) solid;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.pimd-example + .pimd-example {
+  margin-top: calc(0.7rem * 1.4);
+}
+
+.pimd-preview {
+  margin-bottom: calc(0.5em * 1.3);
+}
+
+.pimd-preview::after {
+  border-bottom: 1px rgba(0, 0, 0, 0.07) solid;
+  content: "";
+  display: Block;
+  margin: 10px -2px 0;
+}
+
+.pimd-highlight {
+  background: #fcff9e;
+  border-radius: 1.5px;
+  xcolor: #175a98;
+  margin: 0 0.15ch;
+  padding: 2px 0.35ch;
+  text-decoration: none;
+}
+
+.pimd-highlight .pimd-highlight {
+  padding-bottom: 1px;
+  padding-top: 1px;
+}
+
+.pimd-highlight .pimd-highlight .pimd-highlight {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.pimd-highlight .pimd-highlight .pimd-highlight .pimd-highlight {
+  border-radius: 0;
+}
+
+.pimd-highlight:empty {
+  display: none;
+}
+
+.pimd-highlight-2 {
+  background: #c1ffdb;
+  background: #ceffdf;
+}
+
+.pimd-highlight-3 {
+  background: #f9e2fd;
+}
+
+.pimd-highlight-4 {
+  background: #cbe0fd;
+  background: #def1fd;
+}
+
+.pimd-highlight-5 {
+  background: #ffecd5;
+}
+
+.pimd-example pre {
+  margin: -0.1em 0;
+}
+
+.pimd-example code button {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px rgba(0, 0, 0, 0.02) solid;
+  border-radius: 2px;
+  cursor: pointer;
+  letter-spacing: -1px;
+  font-family: inherit;
+  outline: none;
+  padding: 0 4px 0 3px;
+}
+
+.pimd-code:hover button {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px rgba(0, 0, 0, 0.05) solid;
+}
+
+.pimd-code:hover button:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.pimd-code:hover button:active {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.pimd-preview button {
+  font: inherit;
+  border: 1px #ccc solid;
+  background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+  border-radius: 3px;
+  padding: 3px 10px 1px;
+  box-shadow: rgba(255, 255, 255, 0.3) 0 0px 0px 1px inset;
+}
+
+.pimd-preview button:focus {
+  outline: 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 2px,
+    rgba(255, 255, 255, 0.3) 0 0px 0px 1px inset;
+}
+
+.pimd-preview button:hover {
+  filter: brightness(0.9);
+}
+
+.pimd-preview button:active {
+  filter: brightness(0.7);
+}
+
+.token.entity {
+  background: transparent;
+}</style></head><body><h1>PIMD Showmore Plugin</h1><p>Hides non-relevant parts of code examples.</p><p>Very often code examples require more code to be rendered as preview than to be
+understood by a human. Those extra code is noise and should be hidden.</p><p>This plugin shows <code>···</code> instead of the noise and reveals the code on click.</p><p><img src="https://user-images.githubusercontent.com/103399/46336396-f7049980-c62a-11e8-94ec-9acdee8e858f.gif" alt="Video preview of Showmore plugin"></p><h2>Example usage</h2><div class="pimd-example"><div class="pimd-code"><pre><code class="lang-html">```html <u class="pimd-highlight pimd-highlight-1">+showmore=5..13</u>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>my-list-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    Item 1
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>my-list-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    Item 2
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>my-list-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    Item 3
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>my-list-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    Item 4
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+```
+</code></pre></div></div><p>Result:</p><p><img src="https://user-images.githubusercontent.com/103399/44298456-b4d60180-a2e3-11e8-96f7-5740028c564c.png" alt="preview"></p><h2>Setup</h2><p>This requires the <em>HTML injector</em> plugin to be loaded first:</p><div class="pimd-example"><div class="pimd-code"><pre><code class="lang-javascript"><div><button onclick="this.parentNode.nextSibling.style.display = 'block'; this.parentNode.style.display = 'none'">···</button></div><div style="display: none"><span class="token keyword">const</span> <span class="token punctuation">{</span> Document <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"pimd"</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> Config <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"pimd/lib/config"</span><span class="token punctuation">)</span>
+</div><span class="token keyword">const</span> htmlInjector <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"@pimd/html-injector-plugin"</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> showmorePlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"@pimd/showmore-plugin"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Config</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+config<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>htmlInjector<span class="token punctuation">)</span>
+config<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>showmorePlugin<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> markdown <span class="token operator">=</span> <span class="token template-string"><span class="token string">`
+<div><button onclick="this.parentNode.nextSibling.style.display = 'block'; this.parentNode.style.display = 'none'">···</button></div><div style="display: none">\`\`\`html +showmore=5..13
+&lt;ul&gt;
+  &lt;li class="my-list-item"&gt;
+    Item 1
+  &lt;/li&gt;
+  &lt;li class="my-list-item"&gt;
+    Item 2
+  &lt;/li&gt;
+  &lt;li class="my-list-item"&gt;
+    Item 3
+  &lt;/li&gt;
+  &lt;li class="my-list-item"&gt;
+    Item 4
+  &lt;/li&gt;
+&lt;/ul&gt;
+\`\`\`
+</div>`</span></span>
+
+<span class="token keyword">const</span> doc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Document</span><span class="token punctuation">(</span>markdown<span class="token punctuation">,</span> config<span class="token punctuation">)</span>
+<span class="token keyword">const</span> html <span class="token operator">=</span> doc<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span>
+</code></pre></div></div><h2>Copyright</h2><p>Copyright 2018++ <a href="https://www.hagenburger.net">Nico Hagenburger</a>. See
+<a href="MIT-LICENSE">MIT-LICENSE</a> for details. Get in touch with
+<a href="https://twitter.com/hagenburger">@hagenburger</a> on Twitter or
+<a href="https://github.com/hagenburger/pimd/issues/new">open an issue</a>.</p></body></html>
