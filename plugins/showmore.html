@@ -330,10 +330,7 @@ h6 {
 .pimd-preview button:active {
   filter: brightness(0.7);
 }
-
-.token.entity {
-  background: transparent;
-}</style></head><body><h1>PIMD Showmore Plugin</h1><p>Hides non-relevant parts of code examples.</p><p>Very often code examples require more code to be rendered as preview than to be
+</style></head><body><h1>PIMD Showmore Plugin</h1><p>Hides non-relevant parts of code examples.</p><p>Very often code examples require more code to be rendered as preview than to be
 understood by a human. Those extra code is noise and should be hidden.</p><p>This plugin shows <code>···</code> instead of the noise and reveals the code on click.</p><p><img src="https://user-images.githubusercontent.com/103399/46336396-f7049980-c62a-11e8-94ec-9acdee8e858f.gif" alt="Video preview of Showmore plugin"></p><h2>Example usage</h2><div class="pimd-example"><div class="pimd-code"><pre><code class="lang-html">```html <u class="pimd-highlight pimd-highlight-1">+showmore=5..13</u>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>my-list-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
@@ -377,7 +374,6 @@ config<span class="token punctuation">.</span><span class="token function">use</
 &lt;/ul&gt;
 \`\`\`
 </div>`</span></span>
-
 <span class="token keyword">const</span> doc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Document</span><span class="token punctuation">(</span>markdown<span class="token punctuation">,</span> config<span class="token punctuation">)</span>
 <span class="token keyword">const</span> html <span class="token operator">=</span> doc<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 

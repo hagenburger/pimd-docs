@@ -330,22 +330,40 @@ h6 {
 .pimd-preview button:active {
   filter: brightness(0.7);
 }
-
-.token.entity {
-  background: transparent;
-}</style></head><body><h1>PIMD Prism Plugin</h1><p>Uses <a href="https://prismjs.com">Prism</a> to highlight code blocks.</p><h2>Example usage</h2><div class="pimd-example"><div class="pimd-code"><pre><code class="lang-html"># Example usage
+</style></head><body><h1>PIMD Prism Plugin</h1><p>Uses <a href="https://prismjs.com">Prism</a> to highlight code blocks.</p><h2>Example usage</h2><div class="pimd-example"><div class="pimd-code"><pre><code class="lang-html"># Example usage
 
 Add the language to a code block:
 
-```<u class="pimd-highlight pimd-highlight-1">js</u>
+```<u class="pimd-highlight pimd-highlight-2">html</u>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Example<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+```
+
+Or for JavaScript:
+
+```javascript
+alert("Hello world!")
 ```
 
 Alternatively a file name with suffix can be used:
 
-```index.<u class="pimd-highlight pimd-highlight-2">html</u>
+```index.html
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Example<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
 ```
+</code></pre></div></div><h2>Setup</h2><div class="pimd-example"><div class="pimd-code"><pre><code class="lang-sh">npm i pimd @pimd/prism-plugin
+</code></pre></div></div><div class="pimd-example"><div class="pimd-code"><pre><code class="lang-javascript"><span class="token keyword">const</span> <span class="token punctuation">{</span> Document <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"pimd"</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> Config <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"pimd/lib/config"</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <u class="pimd-highlight pimd-highlight-1">prismPlugin</u> <span class="token operator">=</span> <u class="pimd-highlight pimd-highlight-2"><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"@pimd/prism-plugin"</span><span class="token punctuation">)</span></u>
+
+<span class="token keyword">const</span> <u class="pimd-highlight pimd-highlight-3">config</u> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Config</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<u class="pimd-highlight pimd-highlight-3">config</u><span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(<u class="pimd-highlight pimd-highlight-1"></u></span><u class="pimd-highlight pimd-highlight-1">prismPlugin</u><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> markdown <span class="token operator">=</span> <span class="token template-string"><span class="token string">`
+\`\`\`html
+&lt;p&gt;Example&lt;/p&gt;
+\`\`\`
+`</span></span>
+<span class="token keyword">const</span> doc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Document</span><span class="token punctuation">(</span>markdown<span class="token punctuation">,</span> <u class="pimd-highlight pimd-highlight-3">config</u><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>doc<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre></div></div><h2>Copyright</h2><p>Copyright 2018++ <a href="https://www.hagenburger.net">Nico Hagenburger</a>. See
 <a href="MIT-LICENSE">MIT-LICENSE</a> for details. Get in touch with
 <a href="https://twitter.com/hagenburger">@hagenburger</a> on Twitter or

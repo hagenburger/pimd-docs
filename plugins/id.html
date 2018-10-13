@@ -330,10 +330,7 @@ h6 {
 .pimd-preview button:active {
   filter: brightness(0.7);
 }
-
-.token.entity {
-  background: transparent;
-}</style></head><body><h1>PIMD ID Plugin</h1><p>Adds an HTML ID to code blocks and other elements.</p><h2>Example usage</h2><div class="pimd-example"><div class="pimd-code"><pre><code class="lang-html"># Headline <span class="token prolog">&lt;?: #my-headline ?&gt;</span>
+</style></head><body><h1>PIMD ID Plugin</h1><p>Adds an HTML ID to code blocks and other elements.</p><h2>Example usage</h2><div class="pimd-example"><div class="pimd-code"><pre><code class="lang-html"># Headline <span class="token prolog">&lt;?: #my-headline ?&gt;</span>
 
 ```html #my-code
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Example<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
@@ -347,6 +344,25 @@ Lorem ipsum dolor sit amet. <span class="token prolog">&lt;?: #my-paragraph ?&gt
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>my-paragraph<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Lorem ipsum dolor sit amet.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div><h2>Setup</h2><div class="pimd-example"><div class="pimd-code"><pre><code class="lang-sh">npm i pimd @pimd/id-plugin
+</code></pre></div></div><div class="pimd-example"><div class="pimd-code"><pre><code class="lang-javascript"><span class="token keyword">const</span> <span class="token punctuation">{</span> Document <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"pimd"</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> Config <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"pimd/lib/config"</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <u class="pimd-highlight pimd-highlight-1">idPlugin</u> <span class="token operator">=</span> <u class="pimd-highlight pimd-highlight-2"><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"@pimd/id-plugin"</span><span class="token punctuation">)</span></u>
+
+<span class="token keyword">const</span> <u class="pimd-highlight pimd-highlight-3">config</u> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Config</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<u class="pimd-highlight pimd-highlight-3">config</u><span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(<u class="pimd-highlight pimd-highlight-1"></u></span><u class="pimd-highlight pimd-highlight-1">idPlugin</u><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> markdown <span class="token operator">=</span> <span class="token template-string"><span class="token string">`
+# Headline &lt;?: #my-headline ?&gt;
+
+\`\`\`html #my-code
+&lt;p&gt;Example&lt;/p&gt;
+\`\`\`
+
+Lorem ipsum dolor sit amet. &lt;?: #my-paragraph ?&gt;
+`</span></span>
+<span class="token keyword">const</span> doc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Document</span><span class="token punctuation">(</span>markdown<span class="token punctuation">,</span> <u class="pimd-highlight pimd-highlight-3">config</u><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>doc<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre></div></div><h2>Copyright</h2><p>Copyright 2018++ <a href="https://www.hagenburger.net">Nico Hagenburger</a>. See
 <a href="MIT-LICENSE">MIT-LICENSE</a> for details. Get in touch with
 <a href="https://twitter.com/hagenburger">@hagenburger</a> on Twitter or

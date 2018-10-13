@@ -330,10 +330,7 @@ h6 {
 .pimd-preview button:active {
   filter: brightness(0.7);
 }
-
-.token.entity {
-  background: transparent;
-}</style></head><body><h1>PIMD HTML injector plugin</h1><p>A base for other plugins to insert functionality into code examples.</p><h2>Basic idea</h2><p>It is easy to find out in a source code where to insert HTML – for example
+</style></head><body><h1>PIMD HTML injector plugin</h1><p>A base for other plugins to insert functionality into code examples.</p><h2>Basic idea</h2><p>It is easy to find out in a source code where to insert HTML – for example
 highlight a word, add a tooltip, etc. After the source code got HTML-escaped and
 syntax highlighted, it is hard to find the right offsets.</p><p>This plugin translates offsets from before to after syntax highlighting.</p><h2>Manual example without this plugin</h2><p>Imagine you want to format the <code>x</code> in the following example in italics:</p><div class="pimd-example"><div class="pimd-code"><pre><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>E<u class="pimd-highlight pimd-highlight-1">x</u>ample<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
 </code></pre></div></div><p>When you want to display HTML in HTML, <code>&lt;</code> and <code>&gt;</code> need to be escaped with

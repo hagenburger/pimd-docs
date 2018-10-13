@@ -330,11 +330,8 @@ h6 {
 .pimd-preview button:active {
   filter: brightness(0.7);
 }
-
-.token.entity {
-  background: transparent;
-}</style></head><body><h1>PIMD Allinc Plugin</h1><p>Load all PIMD plugins at once:</p><ul>
-<li><a href="plugins/classes">Classes</a></li><li><a href="plugins/id">ID</a></li><li><a href="plugins/preview">Preview</a></li><li><a href="plugins/highlight">Highlight</a></li><li><a href="plugins/showmore">Showmore</a></li><li><a href="plugins/html-injector">HTML injector</a></li></ul><h2>Usage</h2><div class="pimd-example"><div class="pimd-code"><pre><code class="lang-sh">npm install --save-dev pimd @pimd/allinc-plugin
+</style></head><body><h1>PIMD Allinc Plugin</h1><p>Load all PIMD plugins at once:</p><ul>
+<li><a href="plugins/classes">Classes</a></li><li><a href="plugins/id">ID</a></li><li><a href="plugins/preview">Preview</a></li><li><a href="plugins/highlight">Highlight</a></li><li><a href="plugins/showmore">Showmore</a></li><li><a href="plugins/html-injector">HTML injector</a></li></ul><h2>Setup</h2><div class="pimd-example"><div class="pimd-code"><pre><code class="lang-sh">npm i pimd @pimd/allinc-plugin
 </code></pre></div></div><div class="pimd-example"><div class="pimd-code"><pre><code class="lang-javascript"><span class="token keyword">const</span> <span class="token punctuation">{</span> Document <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"pimd"</span><span class="token punctuation">)</span>
 <span class="token keyword">const</span> Config <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"pimd/lib/config"</span><span class="token punctuation">)</span>
 <span class="token keyword">const</span> <u class="pimd-highlight pimd-highlight-1">allincPlugin</u> <span class="token operator">=</span> <u class="pimd-highlight pimd-highlight-2"><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"@pimd/allinc-plugin"</span><span class="token punctuation">)</span></u>
