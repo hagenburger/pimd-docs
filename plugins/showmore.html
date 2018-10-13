@@ -350,11 +350,11 @@ understood by a human. Those extra code is noise and should be hidden.</p><p>Thi
 </code></pre></div></div><p>Result:</p><p><img src="https://user-images.githubusercontent.com/103399/44298456-b4d60180-a2e3-11e8-96f7-5740028c564c.png" alt="preview"></p><h2>Setup</h2><p>This requires the <em>HTML injector</em> plugin to be loaded first:</p><div class="pimd-example"><div class="pimd-code"><pre><code class="lang-javascript"><div><button onclick="this.parentNode.nextSibling.style.display = 'block'; this.parentNode.style.display = 'none'">···</button></div><div style="display: none"><span class="token keyword">const</span> <span class="token punctuation">{</span> Document <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"pimd"</span><span class="token punctuation">)</span>
 <span class="token keyword">const</span> Config <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"pimd/lib/config"</span><span class="token punctuation">)</span>
 </div><span class="token keyword">const</span> htmlInjector <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"@pimd/html-injector-plugin"</span><span class="token punctuation">)</span>
-<span class="token keyword">const</span> showmorePlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"@pimd/showmore-plugin"</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <u class="pimd-highlight pimd-highlight-1">showmorePlugin</u> <span class="token operator">=</span> <u class="pimd-highlight pimd-highlight-2"><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"@pimd/showmore-plugin"</span><span class="token punctuation">)</span></u>
 
-<span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Config</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-config<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>htmlInjector<span class="token punctuation">)</span>
-config<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>showmorePlugin<span class="token punctuation">)</span>
+<span class="token keyword">const</span> <u class="pimd-highlight pimd-highlight-3">config</u> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Config</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<u class="pimd-highlight pimd-highlight-3">config</u><span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>htmlInjector<span class="token punctuation">)</span>
+<u class="pimd-highlight pimd-highlight-3">config</u><span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(<u class="pimd-highlight pimd-highlight-1"></u></span><u class="pimd-highlight pimd-highlight-1">showmorePlugin</u><span class="token punctuation">)</span>
 
 <span class="token keyword">const</span> markdown <span class="token operator">=</span> <span class="token template-string"><span class="token string">`
 <div><button onclick="this.parentNode.nextSibling.style.display = 'block'; this.parentNode.style.display = 'none'">···</button></div><div style="display: none">\`\`\`html +showmore=5..13
@@ -374,9 +374,8 @@ config<span class="token punctuation">.</span><span class="token function">use</
 &lt;/ul&gt;
 \`\`\`
 </div>`</span></span>
-<span class="token keyword">const</span> doc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Document</span><span class="token punctuation">(</span>markdown<span class="token punctuation">,</span> config<span class="token punctuation">)</span>
+<span class="token keyword">const</span> doc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Document</span><span class="token punctuation">(</span>markdown<span class="token punctuation">,</span> <u class="pimd-highlight pimd-highlight-3">config</u><span class="token punctuation">)</span>
 <span class="token keyword">const</span> html <span class="token operator">=</span> doc<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span>
 </code></pre></div></div><h2>Copyright</h2><p>Copyright 2018++ <a href="https://www.hagenburger.net">Nico Hagenburger</a>. See
 <a href="MIT-LICENSE">MIT-LICENSE</a> for details. Get in touch with
